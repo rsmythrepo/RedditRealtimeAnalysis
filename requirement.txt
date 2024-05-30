@@ -1,0 +1,29 @@
+Using a Reddit topics of your choice, you are asked to provide some insights and metrics in real time. The hackathon can be done in teams of up to 4 people. There are people discussing a very wide range of topics on reddit, so feel free to be creative. There are some guidelines but you can feel free to analyse and visualise the data in any way you find interesting.
+More details:
+Get some streaming data from Reddit and send it using a socket.
+The data coming from Reddit should contain posts, or comments, or both
+It must be properly structured, containing at least the text and the creation date of the reddit post.
+You can pull data from several subreddits at once.
+Get another process to receive the data from the socket and process it.
+Put the raw data on a temporary table in Spark (name: "raw"), and save it to files on disk
+Get the references to other users (start with `/u/`), to other posts (start with `/r/`), and to external sites (url format), and the number of occurrences (suggested in 60 seconds windows every 5 seconds).
+Get top 10 important words in window using TF-IDF (Term Frequency, inverse Document Frequency). "Document" refers to the corpus of all previous posts/comments, as stored in table "raw".   
+[Optional] Get the time range of the data (get it from the posts)
+[Optional] Get the sentiment analysis of every post and report the average one.
+[Optional] Add any other metric you may find interesting.
+Output data
+Put the processed data on a temporary table on Spark (name: "metrics").
+Save the results to files on disk.
+[Optional] Save the results to a DB.
+Visualization.
+The types of visualizations are up to you
+Display the results in a jupyter-notebook or on a web page.
+[Optional] Have the results shown in real-time, automatically updated.
+[Optional] on top of the analysis for the current mini-batch, display historical information (i.e. from previous mini-batches).
+Deliverable
+All python code necessary to reproduce the results (producer side, consumer side, webapps), with instructions on how to run it and comments to explain the decisions behind part of the code.
+Output data files (cut to 1 MB if needed)
+docker setup if any
+You can put all files into 1 zip file.
+1 submission per team. Indicate the name of all members of your team at the top of your code, as well as a general description of your project.
+Good luck !
