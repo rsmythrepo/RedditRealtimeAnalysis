@@ -1,0 +1,4 @@
+You can pull data from several subreddits at once.
+Get another process to receive the data from the socket and process it.
+Put the raw data on a temporary table in Spark (name: "raw"), and save it to files on disk
+Get the references to other users (start with `/u/`), to other posts (start with `/r/`), and to external sites (url format), and the number of occurrences (suggested in 60 seconds windows every 5 seconds).

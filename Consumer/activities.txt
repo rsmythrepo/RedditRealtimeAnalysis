@@ -1,0 +1,8 @@
+Get top 10 important words in window using TF-IDF (Term Frequency, inverse Document Frequency). "Document" refers to the corpus of all previous posts/comments, as stored in table "raw".   
+[Optional] Get the time range of the data (get it from the posts)
+[Optional] Get the sentiment analysis of every post and report the average one.
+[Optional] Add any other metric you may find interesting.
+Output data
+Put the processed data on a temporary table on Spark (name: "metrics").
+Save the results to files on disk.
+[Optional] Save the results to a DB.
