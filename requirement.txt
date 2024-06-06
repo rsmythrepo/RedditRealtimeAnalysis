@@ -1,10 +1,12 @@
 Using a Reddit topics of your choice, you are asked to provide some insights and metrics in real time. The hackathon can be done in teams of up to 4 people. There are people discussing a very wide range of topics on reddit, so feel free to be creative. There are some guidelines but you can feel free to analyse and visualise the data in any way you find interesting.
 More details:
+# Producer
 Get some streaming data from Reddit and send it using a socket.
 The data coming from Reddit should contain posts, or comments, or both
 It must be properly structured, containing at least the text and the creation date of the reddit post.
 You can pull data from several subreddits at once.
 Get another process to receive the data from the socket and process it.
+# Consumer
 Put the raw data on a temporary table in Spark (name: "raw"), and save it to files on disk
 Get the references to other users (start with `/u/`), to other posts (start with `/r/`), and to external sites (url format), and the number of occurrences (suggested in 60 seconds windows every 5 seconds).
 Get top 10 important words in window using TF-IDF (Term Frequency, inverse Document Frequency). "Document" refers to the corpus of all previous posts/comments, as stored in table "raw".   
